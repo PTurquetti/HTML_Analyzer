@@ -2,10 +2,10 @@ EASTER_EGG_URLS
 
 HTML Analyzer
 
-Author: Paulo Henrique Vedovatto Turquetti
-Email: pauloturquetti29@gmail.com
-GitHub Profile: https://github.com/PTurquetti/
-GitHub Repo.: https://github.com/PTurquetti/HTML_Analyzer/
+Author: Paulo Henrique Vedovatto Turquetti  
+Email: pauloturquetti29@gmail.com  
+GitHub Profile: https://github.com/PTurquetti/  
+GitHub Repo.: https://github.com/PTurquetti/HTML_Analyzer/  
 
 Technologies Used:
   - Java 17.0.14
