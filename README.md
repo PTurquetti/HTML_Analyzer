@@ -1,4 +1,4 @@
-## EASTER_EGG_URLS
+EASTER_EGG_URLS
 
 # HTML Analyzer
 
