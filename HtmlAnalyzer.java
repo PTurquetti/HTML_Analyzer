@@ -7,6 +7,7 @@ import java.util.Stack;
 TO DO:
 
 -Casos especiais de html invalido
+-Funções: isTag, isOpeningTag e isClosureTag
 -tratamento de excessoes
 -Otimizar codigo
 -Analisar questões de segurança do codigo
@@ -14,7 +15,6 @@ TO DO:
 */
 
 public class HtmlAnalyzer{
-
 
     public static void main(String[] args){
 
@@ -26,21 +26,20 @@ public class HtmlAnalyzer{
         
         try {
 
-            URL url = new URL(args[0]);                 //Getting URL from argvs
-            String[] terms = getContent(url);           //Extracting content from HTML
-            String result = getMaxDepthText(terms);     //Gets the max depth text or HTML malformation
-
+            String result = getMaxDepthText(getContent(new URL(args[0])));     //Gets the max depth text or HTML malformation
             System.out.println(result);
 
         } catch (MalformedURLException e) {
-            e.printStackTrace();
+            e.getMessage();
+            System.out.println("URL not valid");
         } catch (Exception e) {
-            e.printStackTrace();
+            e.getMessage();
+            System.out.println("Error");
         }
 
     }
 
-    public static String[] getContent(URL url) throws IOException{
+    public static String[] getContent(URL url) throws IOException{  //Transform the HTML content into an array of terms
 
         BufferedReader htmlContent = new BufferedReader(new InputStreamReader(url.openStream()));    //Reding HTML content
         
@@ -54,22 +53,22 @@ public class HtmlAnalyzer{
 
         // v-- APAGAR AQUI QUANDO PRONTO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         content = """
-        
-        <html>
-        <head>
-        <title>
-        Titulo
-        </title>
-        </head>
-        <body>
-        <div>
-        <p>
-        Texto sem fechamento adequado
-        </p>
-        </div>
-        </body>
-        </html>
-        """;
+<html>
+<head>
+<title>
+Este e o titulo.
+</title>
+</head>
+<body>
+<div>
+<p>
+Texto mais profundo
+</p>
+</div>
+</body>
+</html>
+""";
+
 
 
 
@@ -141,10 +140,10 @@ public class HtmlAnalyzer{
         // Pilha tem que terminar vazia
         // não pode haver texto sem tag aberta (verificar se está em tag de texto)
 
-        if(terms[0].startsWith("<") && terms[0].endsWith(">")){ //HTML starts with a text (no opening tags)
+        if(!(terms[0].startsWith("<") && terms[0].endsWith(">"))){ //HTML starts with a text (no opening tags)
             return "malformed HTML";
         }
-        if(terms[terms.length -1].startsWith("<") && terms[terms.length -1].endsWith(">")){ //HTML ends with a text (tags opened)
+        if(!(terms[terms.length -1].startsWith("<") && terms[terms.length -1].endsWith(">"))){ //HTML ends with a text (tags opened)
             return "malformed HTML";
         }
         if(!stack.isEmpty()){            //Opening tags were not closed
