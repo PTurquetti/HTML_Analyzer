@@ -27,16 +27,19 @@ public class HtmlAnalyzer{
             System.out.println(result);
 
         } catch(MalformedURLException e){   //Malformed URL
-            System.out.println("Malformed URL -" + e.getMessage());
+            //System.out.println("Malformed URL -" + e.getMessage());
+            System.out.println("URL connection error");
 
         } catch(IOException e){             //Trouble reading HTML content
-            System.out.println("URL connection error - " + e.getMessage());
+            //System.out.println("URL connection error - " + e.getMessage());
+            System.out.println("URL connection error");
 
         } catch(IllegalStateException e){   //Malformed HTML detected
             System.out.println("malformed HTML");
 
         } catch(Exception e){               //Other exceptions
-            System.out.println("Unexpected error: " + e.getMessage());
+            //System.out.println("Unexpected error: " + e.getMessage());
+            System.out.println("URL connection error");
         }
 
     }
