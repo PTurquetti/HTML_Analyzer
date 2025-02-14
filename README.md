@@ -13,9 +13,10 @@ Technologies Used:
   - GitHub
 
 Description: 
+
   This project analyzes the structure of an HTML document from a given URL and extracts the deepest text content within the element hierarchy.
 
 How to Use:
-  1- Compile the code: "javac HtmlAnalyzer.java"
-  2- Run the program with a URL as an argument: "java HtmlAnalyzer <URL>"
+  - Compile the code: "javac HtmlAnalyzer.java"
+  - Run the program with a URL as an argument: "java HtmlAnalyzer <URL>"
 
