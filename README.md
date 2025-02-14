@@ -1,6 +1,6 @@
-EASTER_EGG_URLS
+##EASTER_EGG_URLS
 
-HTML Analyzer
+###HTML Analyzer
 
 Author: Paulo Henrique Vedovatto Turquetti  
 Email: pauloturquetti29@gmail.com  
