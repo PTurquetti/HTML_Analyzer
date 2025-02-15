@@ -4,11 +4,12 @@ EASTER_EGG_URLS
 
 ### Author: Paulo Henrique Vedovatto Turquetti  
 ### Email: pauloturquetti29@gmail.com  
-### GitHub Profile: https://github.com/PTurquetti/  
-### GitHub Repo.: https://github.com/PTurquetti/HTML_Analyzer/  
+### GitHub Profile: https://github.com/PTurquetti  
+### GitHub Repo.: https://github.com/PTurquetti/HTML_Analyzer  
 
 ### Technologies Used:
-  - Java 17.0.14
+  - Java
+  - JDK 17.0.14
   - Git
   - GitHub
 
