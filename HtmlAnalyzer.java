@@ -11,11 +11,6 @@ EASTER_EGG_URLS found :)
 Author: Paulo Henrique Vedovatto Turquetti
 GitHub Repo.: https://github.com/PTurquetti/HTML_Analyzer
 
-
-TO DO:
--Casos especiais de html mal formado //REAVALIAR
--Analisar questões de segurança do codigo
--Testar
 ____________________________________________
 */
 
